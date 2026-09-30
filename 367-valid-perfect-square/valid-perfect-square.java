@@ -5,9 +5,10 @@ class Solution {
 
        while(start <= end){
         int mid = start + (end - start) / 2;
-        if(mid * mid == num) return true;
+        long product =(long) mid * mid;
 
-        if(mid >= num/mid){
+        if(product == num) return true;
+        if(product > num){
           end = mid - 1;
         }else{
             start = mid + 1;
